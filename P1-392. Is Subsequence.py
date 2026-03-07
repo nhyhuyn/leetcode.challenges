@@ -1,0 +1,16 @@
+class Solution:
+    def isSubsequence(self, s, t):
+        """
+        :type s: str
+        :type t: str
+        :rtype: bool
+        """
+        i = 0  # con trỏ cho s
+        j = 0  # con trỏ cho t
+        
+        while i < len(s) and j < len(t):
+            if s[i] == t[j]:
+                i += 1
+            j += 1
+        
+        return i == len(s)
